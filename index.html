@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Sorting Visualizer</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <h3 class="title">
+                <span><img src="./Images/algorithm.png" alt=""></span>Algorithum Visulizer
+            </h3>
+
+            <div class="custom_inputs">
+                <div class="input_container">
+                    <h5>Size of the Array : </h5>
+                    <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                </div>
+                <div class="input_container">
+                    <h5>Speed to the Algorithm : </h5>
+                    <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                </div>
+                <button id="reset" class="btn">Reset</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="algorithums">
+        <div class="algos">
+            <h3><span><img src="./Images/sort.png"></span>Sorting</h3>
+            <button class="btn" id="btn_algo">Bubble</button>
+            <button class="btn" id="btn_algo">Selection</button>
+            <button class="btn" id="btn_algo">Insertion</button>
+            <button class="btn" id="btn_algo">Merge</button>
+            <button class="btn" id="btn_algo">Quick</button>
+            <button class="btn" id="btn_algo">Heap</button>
+        </div>
+    </div>
+
+    <section class="container">
+        <div id="Info_Cont1" class="Info_Cont1">
+
+            <h4>TIME COMPLEXITY</h4>
+
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="array_container" class="array_container">
+
+        </div>
+
+        <div id="Info_Cont2" class="Info_Cont2">
+
+            <h4>SPACE COMPLEXITY</h4>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Space_Worst"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="/Algorithums/main.js"></script>
+    <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="/Algorithums/Visualizations.js"></script> <!--This should be loaded after main.js-->
+
+    <script src="/Algorithums/bubble_sort.js"></script>
+    <script src="/Algorithums/selection_sort.js"></script>
+    <script src="/Algorithums/insertion_sort.js"></script>
+    <script src="/Algorithums/merge_sort.js"></script>
+    <script src="/Algorithums/quick_sort.js"></script>
+    <script src="/Algorithums/heap_sort.js"></script>
+    <script src="/Algorithums/Radix.js"></script>
+</body>
+
+<!--
+    *****************
+    DONE BY:-   Pujyam Dheeraj !
+    *****************
+-->
+
+</html>

@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ffffff;
+    --secondry: #3d3d3d;
+    --accent: #686de0;
+    --Open-sans: "Open Sans", serif;
+    --Oswald: "Oswald", serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--primary);
+    font-family: var(--Open-sans);
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    color: var(--primary);
+    background-color: var(--secondry);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-right: 6rem;
+}
+
+nav .title span img {
+    width: 4.5rem;
+    height: 4.5rem;
+    vertical-align: middle;
+}
+
+nav .title {
+    width: max-content;
+    font-size: 3rem;
+    font-family: var(--Oswald);
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+
+}
+
+nav .title::after {
+    content: "";
+    position: absolute;
+    left: 5rem;
+    bottom: -5px;
+    width: 0%;
+    height: 5px;
+    border-radius: 3rem;
+    background: linear-gradient(to right, var(--accent), var(--primary));
+    transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav .title:hover::after {
+    width: 90%;
+}
+
+nav .custom_inputs {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+nav .custom_inputs .input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .custom_inputs .input_container h5 {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.algorithums {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--secondry);
+    padding: 0 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.algorithums .algos h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-size: 1.6rem;
+    padding-right: 2rem;
+    font-family: var(--Open-sans);
+    font-weight: 600;
+}
+
+.algorithums .algos h3 span img {
+    width: 2rem;
+    vertical-align: middle;
+}
+
+.algorithums .algos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container {
+    height: 70vh;
+}
+
+.array_container {
+    position: relative;
+    display: flex;
+    height: 65vh;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 0.3rem;
+    padding: 0.9px 1rem;
+}
+
+.btn {
+    font-family: var(--Open-sans);
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 8px 30px;
+    border: 2px solid rgba(0, 0, 255, 0.593);
+    color: var(--primary);
+    background-color: var(--accent);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Info_Cont1 h4,
+.Info_Cont2 h4 {
+    font-size: 1.2rem;
+    font-family: var(--Oswald);
+    padding-bottom: 0.8rem;
+}
+
+.Info_Cont1,
+.Info_Cont2 {
+    position: absolute;
+    width: max-content;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondry);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+}
+
+/* Flattened nested selectors from SASS syntax */
+.Info_Cont1 .Complexity_Containers,
+.Info_Cont2 .Complexity_Containers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Info_Cont1 .Pair_Definitions,
+.Info_Cont2 .Pair_Definitions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Info_Cont1 .Pair_Definitions p,
+.Info_Cont2 .Pair_Definitions p {
+    font-family: var(--Oswald);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.Info_Cont1 {
+    bottom: 1.5rem;
+    left: 2rem;
+}
+
+.Info_Cont2 {
+    bottom: 1.5rem;
+    right: 2rem;
+}
+
+/* Responsive Mobile First Design ! */
+
+/* =================== */
+/* Desktop First Styles */
+/* =================== */
+/* All desktop styles here (base styles) */
+
+/* =================== */
+/* Large Screens (1200px and below) */
+/* =================== */
+@media screen and (max-width: 1200px) {
+    header nav {
+        padding: 1.5rem;
+        margin-right: 3rem;
+    }
+
+    .array_container {
+        width: 85%;
+    }
+}
+
+/* =================== */
+/* Medium Screens (Tablets 768px and below) */
+/* =================== */
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 1.5rem 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        margin-right: 0;
+        align-items: stretch;
+    }
+
+    nav .title {
+        font-size: 2rem;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    nav .title span img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    nav .custom_inputs {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .algorithums {
+        height: 15rem;
+    }
+
+    .algorithums .algos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .algorithums .algos h3 {
+        text-align: center;
+        margin: 1rem auto;
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        flex: 1;
+        padding: 6px 20px;
+        font-size: 0.9rem;
+    }
+
+    .array_container {
+        width: 95%;
+        min-height: 50vh;
+        padding: 0.5rem;
+    }
+
+    .Info_Cont1,
+    .Info_Cont2 {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .Info_Cont1 h4,
+    .Info_Cont2 h4 {
+        font-size: 1.1rem;
+    }
+
+    .Pair_Definitions p {
+        font-size: 0.9rem;
+    }
+}
+
+/* =================== */
+/* Small Screens (Mobile 480px and below) */
+/* =================== */
+@media screen and (max-width: 480px) {
+    nav .title {
+        font-size: 1.8rem;
+    }
+
+    .array_container {
+        width: 98%;
+        height: 50vh;
+    }
+
+    .btn {
+        padding: 5px 15px;
+        font-size: 0.85rem;
+    }
+
+    .algorithums .algos h3 {
+        font-size: 1.2rem;
+    }
+
+    .Info_Cont1,
+    .Info_Cont2 {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .Pair_Definitions {
+        gap: 0.5rem;
+    }
+}
+
+/* =================== */
+/* Special Cases */
+/* =================== */
+
+/* Landscape Orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .array_container {
+        height: 65vh;
+    }
+
+    header {
+        height: auto;
+    }
+}
+
+/* Touch Device Optimization */
+@media (pointer: coarse) {
+    .btn {
+        min-width: 80px;
+        padding: 8px 25px;
+    }
+
+    input[type="range"] {
+        min-height: 30px;
+    }
+}
